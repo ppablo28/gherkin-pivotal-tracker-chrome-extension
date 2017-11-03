@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Gherkin Template Syntax Generator for Pivotal Tracker",
+    "description": "Adds several buttons to Pivotal for generating commonly used Gherkin syntax templates.",
+    "version": "1.0.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.pivotaltracker.com/*"
+            ],
+            "js": [
+                "src/jquery-2.2.4.min.js",
+                "src/gherkin-syntax.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": {
+        "16": "resources/icon-16.png",
+        "48": "resources/icon-48.png",
+        "128": "resources/icon-128.png"
+    },
+    "web_accessible_resources": [
+        "resources/translations/en.json",
+        "resources/translations/pl.json"
+    ],
+    "permissions": [
+        "https://www.pivotaltracker.com/*"
+    ]
+}
